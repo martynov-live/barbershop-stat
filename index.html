@@ -11,7 +11,7 @@
   <style>
     /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { }
 
     :root {
       --bg:    #111111;
@@ -878,6 +878,7 @@
   </style>
 </head>
 <body>
+<script>history.replaceState(null,null,window.location.pathname);window.scrollTo(0,0);</script>
 
 <!-- ══════════════════ NAV ══════════════════ -->
 <header class="nav" id="nav">
@@ -1179,9 +1180,9 @@
 <button class="back-top" id="back-top" aria-label="Наверх">↑</button>
 
 <script>
-  // ── Always open at top (prevent browser scroll restoration) ───
+  // ── Prevent scroll restoration and anchor scroll ───────────────
   if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
-  window.scrollTo(0, 0);
+  window.addEventListener('load', function(){ setTimeout(function(){ window.scrollTo(0, 0); }, 0); });
 
   // ── Nav scroll ────────────────────────────────────────────────
   const nav = document.getElementById('nav');
