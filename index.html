@@ -696,6 +696,72 @@
     }
 
     /* ─────────────────────────────────────────────
+       TEAM
+    ───────────────────────────────────────────── */
+    .team {
+      background: var(--s2);
+      padding: 120px 0;
+    }
+
+    .team-header { margin-bottom: 64px; }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--ln);
+      border: 1px solid var(--ln);
+    }
+
+    .team-card {
+      background: var(--s2);
+      padding: 48px 28px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+      transition: background 0.2s;
+    }
+    .team-card:hover { background: var(--s3); }
+
+    .team-avatar {
+      width: 80px;
+      height: 80px;
+      background: var(--s4);
+      border: 1px solid var(--ln2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .team-name {
+      font-family: var(--fh);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--wh);
+    }
+
+    .team-role {
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--t3);
+      margin-bottom: 4px;
+    }
+
+    .team-card .btn-primary {
+      font-size: 0.78rem;
+      padding: 11px 22px;
+      letter-spacing: 1.5px;
+    }
+
+    /* ─────────────────────────────────────────────
        BACK TO TOP
     ───────────────────────────────────────────── */
     .back-top {
@@ -787,6 +853,7 @@
       .adv-grid    { grid-template-columns: 1fr; }
       .reviews-grid{ grid-template-columns: 1fr; }
       .services-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .team-grid   { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 640px) {
@@ -795,14 +862,15 @@
       .nav-toggle { display: flex; }
 
       .hero-content { padding-top: 100px; }
-      .hero-title { font-size: clamp(80px, 28vw, 180px); }
+      .hero-title { font-size: clamp(48px, 15vw, 180px); letter-spacing: 2px; }
       .hero-sub { font-size: 0.95rem; }
       .hero-btns { flex-direction: column; }
       .btn-primary, .btn-ghost { text-align: center; }
 
       .services-grid { grid-template-columns: 1fr; }
       .service-card:nth-child(n)  { grid-column: span 1; }
-      .services-header, .advantages, .reviews, .contacts { padding-top: 72px; padding-bottom: 72px; }
+      .services-header, .advantages, .team, .reviews, .contacts { padding-top: 72px; padding-bottom: 72px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
 
       .contacts-cta-block { padding: 32px 24px; }
       .footer-city { display: none; }
@@ -821,7 +889,7 @@
         <li><a href="#services">Цены</a></li>
         <li><a href="#contacts">Контакты</a></li>
       </ul>
-      <a class="nav-cta" href="#contacts">Записаться</a>
+      <a class="nav-cta" href="https://n2031429.yclients.com/company/1782435/personal/select-master" target="_blank" rel="noopener">Записаться</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Меню">
         <span></span><span></span><span></span>
       </button>
@@ -834,7 +902,7 @@
   <a href="#services"  id="mob-services">Услуги</a>
   <a href="#services"  id="mob-prices">Цены</a>
   <a href="#contacts"  id="mob-contacts">Контакты</a>
-  <a href="#contacts"  class="btn-primary">Записаться</a>
+  <a href="https://n2031429.yclients.com/company/1782435/personal/select-master" class="btn-primary" target="_blank" rel="noopener">Записаться</a>
 </nav>
 
 <!-- ══════════════════ HERO ══════════════════ -->
@@ -846,7 +914,7 @@
     <div class="hero-divider"></div>
     <p class="hero-sub">Место, где мужчина обретает свою <em>«Стать»</em></p>
     <div class="hero-btns">
-      <a href="#contacts" class="btn-primary">Записаться онлайн</a>
+      <a href="https://n2031429.yclients.com/company/1782435/personal/select-master" class="btn-primary" target="_blank" rel="noopener">Записаться онлайн</a>
       <a href="#services"  class="btn-ghost">Наши услуги</a>
     </div>
   </div>
@@ -924,7 +992,7 @@
     </div>
 
     <div class="services-footer">
-      <a href="#contacts" class="btn-primary fade-up">Записаться на услугу</a>
+      <a href="https://n2031429.yclients.com/company/1782435/personal/select-master" class="btn-primary fade-up" target="_blank" rel="noopener">Записаться на услугу</a>
     </div>
   </div>
 </section>
@@ -963,11 +1031,49 @@
 
 <div class="hr"></div>
 
+<!-- ══════════════════ TEAM ══════════════════ -->
+<section class="team noise" id="team">
+  <div class="container">
+    <div class="team-header">
+      <div class="sec-label fade-up">03 / Команда</div>
+      <h2 class="sec-title fade-up d1">НАША КОМАНДА</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-up">
+        <div class="team-avatar">✂️</div>
+        <div class="team-name">Александр</div>
+        <div class="team-role">Топ барбер</div>
+        <a href="https://n2031429.yclients.com/company/1782435/personal/select-master" class="btn-primary" target="_blank" rel="noopener">Записаться</a>
+      </div>
+      <div class="team-card fade-up d1">
+        <div class="team-avatar">✂️</div>
+        <div class="team-name">Катрин</div>
+        <div class="team-role">Топ барбер</div>
+        <a href="https://n2031429.yclients.com/company/1782435/personal/select-master" class="btn-primary" target="_blank" rel="noopener">Записаться</a>
+      </div>
+      <div class="team-card fade-up d2">
+        <div class="team-avatar">✂️</div>
+        <div class="team-name">Владислав</div>
+        <div class="team-role">Топ барбер</div>
+        <a href="https://n2031429.yclients.com/company/1782435/personal/select-master" class="btn-primary" target="_blank" rel="noopener">Записаться</a>
+      </div>
+      <div class="team-card fade-up d3">
+        <div class="team-avatar">💅</div>
+        <div class="team-name">Софья</div>
+        <div class="team-role">Мастер маникюра</div>
+        <a href="https://n2031429.yclients.com/company/1782435/personal/select-master" class="btn-primary" target="_blank" rel="noopener">Записаться</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
 <!-- ══════════════════ REVIEWS ══════════════════ -->
 <section class="reviews noise" id="reviews">
   <div class="container">
     <div class="reviews-header">
-      <div class="sec-label fade-up">03 / Отзывы</div>
+      <div class="sec-label fade-up">04 / Отзывы</div>
       <h2 class="sec-title fade-up d1">ЧТО ГОВОРЯТ КЛИЕНТЫ</h2>
     </div>
     <div class="reviews-grid">
@@ -1005,7 +1111,7 @@
 <section class="contacts noise" id="contacts">
   <div class="container">
     <div class="contacts-header">
-      <div class="sec-label fade-up">04 / Контакты</div>
+      <div class="sec-label fade-up">05 / Контакты</div>
       <h2 class="sec-title fade-up d1">КАК НАС НАЙТИ</h2>
     </div>
     <div class="contacts-inner">
@@ -1042,22 +1148,14 @@
           </div>
         </div>
 
-        <a href="https://instagram.com/statanapa" class="social-row" target="_blank" rel="noopener" style="margin-top:1px">
-          <div class="social-icon">📸</div>
-          <div>
-            <div class="social-name">Instagram</div>
-            <div class="social-handle">@statanapa</div>
-          </div>
-          <span style="margin-left:auto;font-size:.8rem;color:var(--t3)">→</span>
-        </a>
       </div>
 
       <div class="fade-up d1">
         <div class="contacts-cta-block">
           <div class="cta-heading">ЗАПИСАТЬСЯ</div>
-          <p class="cta-sub">Позвоните нам или напишите в Instagram — подберём удобное время. Запись доступна ежедневно с 10:00 до 22:00.</p>
-          <a href="tel:+79883224255" class="btn-primary" style="display:block;text-align:center">
-            Позвонить — +7 (988) 322-42-55
+          <p class="cta-sub">Онлайн-запись доступна круглосуточно. Выберите мастера и удобное время прямо сейчас.</p>
+          <a href="https://n2031429.yclients.com/company/1782435/personal/select-master" class="btn-primary" style="display:block;text-align:center" target="_blank" rel="noopener">
+            Записаться онлайн
           </a>
         </div>
       </div>
@@ -1081,6 +1179,10 @@
 <button class="back-top" id="back-top" aria-label="Наверх">↑</button>
 
 <script>
+  // ── Always open at top (prevent browser scroll restoration) ───
+  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+  window.scrollTo(0, 0);
+
   // ── Nav scroll ────────────────────────────────────────────────
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
