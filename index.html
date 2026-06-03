@@ -29,7 +29,7 @@
       --fb:  'Inter', sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
+    html {  }
 
     body {
       font-family: var(--fb);
@@ -764,8 +764,9 @@
 </head>
 <body>
 <script>
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  window.addEventListener('load', () => setTimeout(() => window.scrollTo(0, 0), 0));
+if(window.location.hash){window.location.hash='';history.replaceState(null,null,window.location.pathname);}
+window.scrollTo(0,0);
+window.addEventListener('load',function(){setTimeout(function(){window.scrollTo(0,0);},0);});
 </script>
 
 <!-- ══ NAV ══ -->
